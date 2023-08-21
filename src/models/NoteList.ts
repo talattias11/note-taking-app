@@ -1,5 +1,4 @@
 import { Note } from "./Note";
-import { Render } from "./Render";
 
 export class NoteList {
   notes: Note[] = JSON.parse(localStorage.getItem("notes")!) || [];
