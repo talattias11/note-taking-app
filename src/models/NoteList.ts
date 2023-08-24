@@ -42,4 +42,10 @@ export class NoteList {
     localStorage.setItem("notes", JSON.stringify(this.notes));
   }
 
+  clearAllNotes(){
+    this.notes=[];
+    localStorage.setItem('notes', JSON.stringify([]))
+  }
+
+  
 }

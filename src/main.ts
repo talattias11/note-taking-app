@@ -37,7 +37,7 @@ function main() {
     render.renderList(searchResult);
   });
 
-const colorButton = document.querySelector("#sort-color") as HTMLButtonElement; 
+const colorButton = document.querySelector("#sortcolor") as HTMLButtonElement; 
 
 colorButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -61,12 +61,13 @@ createdDateButton.addEventListener('click', (event) => {
   render.renderList(noteList.notes); 
 });
 
-const deleteAllBtn = document.getElementById('deleteAllBtn') as HTMLButtonElement;
+const deleteAllBtn = document.getElementById('deleteAll') as HTMLButtonElement;
 
-deleteAllBtn.addEventListener('click', (event)=>{
-  event.preventDefault();
+deleteAllBtn.addEventListener('click', ()=>{
+  noteList.clearAllNotes()
   render.renderList(noteList.notes); 
 })
+
 }
 
 window.addEventListener("DOMContentLoaded", main);
